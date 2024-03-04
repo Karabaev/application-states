@@ -1,0 +1,16 @@
+{
+    "name": "com.karabaev.applicationLifeCycle",
+    "rootNamespace": "com.karabaev.applicationLifeCycle",
+    "references": [
+        "UniTask"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
