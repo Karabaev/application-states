@@ -1,6 +1,6 @@
 using Cysharp.Threading.Tasks;
 
-namespace com.karabaev.applicationLifeCycle.StateMachine
+namespace com.karabaev.applicationStateMachine
 {
   public interface IApplicationState
   {
@@ -18,7 +18,7 @@ namespace com.karabaev.applicationLifeCycle.StateMachine
     protected UniTask EnterNextStateAsync<TState, TNextContext>(TNextContext context) where TState : ApplicationState<TNextContext>
       => _stateMachine.EnterAsync<TState, TNextContext>(context);
 
-    protected UniTask EnterNextStateAsync<TState>() where TState : ApplicationState<DummyStateContext>
+    protected UniTask EnterNextStateAsync<TState>() where TState : ApplicationState<EmptyStateContext>
       => _stateMachine.EnterAsync<TState>();
     
     protected ApplicationState(ApplicationStateMachine stateMachine) => _stateMachine = stateMachine;

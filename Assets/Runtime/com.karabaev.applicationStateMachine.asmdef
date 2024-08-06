@@ -1,6 +1,6 @@
 {
-    "name": "com.karabaev.applicationLifeCycle",
-    "rootNamespace": "com.karabaev.applicationLifeCycle",
+    "name": "com.karabaev.applicationStateMachine",
+    "rootNamespace": "com.karabaev.applicationStateMachine",
     "references": [
         "UniTask"
     ],

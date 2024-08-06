@@ -1,7 +1,7 @@
 {
-  "name": "com.karabaev.applicationlifecycle",
-  "displayName": "com.karabaev.applicationLifeCycle",
-  "version": "0.1.0",
+  "name": "com.karabaev.applicationstatemachine",
+  "displayName": "com.karabaev.applicationStateMachine",
+  "version": "0.2.0",
   "unity": "2022.3",
   "author": "Karabaev Maksim"
 }
