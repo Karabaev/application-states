@@ -1,7 +1,7 @@
 using System;
 using Cysharp.Threading.Tasks;
 
-namespace com.karabaev.applicationLifeCycle.StateMachine
+namespace com.karabaev.applicationStateMachine
 {
   public class ApplicationStateMachine : IDisposable
   {
@@ -19,7 +19,10 @@ namespace com.karabaev.applicationLifeCycle.StateMachine
       await state.EnterAsync(context);
     }
 
-    public UniTask EnterAsync<TState>() where TState : ApplicationState<DummyStateContext> => EnterAsync<TState, DummyStateContext>(default);
+    public UniTask EnterAsync<TState>() where TState : ApplicationState<EmptyStateContext>
+    {
+      return EnterAsync<TState, EmptyStateContext>(default);
+    }
 
     public void Dispose() => _activeState?.ExitAsync().Forget();
 

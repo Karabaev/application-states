@@ -1,4 +1,4 @@
-namespace com.karabaev.applicationLifeCycle.StateMachine
+namespace com.karabaev.applicationStateMachine
 {
   public interface IStateFactory
   {
