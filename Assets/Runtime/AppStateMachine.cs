@@ -1,15 +1,19 @@
 using System;
+using com.karabaev.applicationStateMachine.States;
+using com.karabaev.applicationStateMachine.States.Contexts;
 using Cysharp.Threading.Tasks;
+using JetBrains.Annotations;
 
 namespace com.karabaev.applicationStateMachine
 {
-  public class ApplicationStateMachine : IDisposable
+  [PublicAPI]
+  public class AppStateMachine : IDisposable
   {
     private readonly IStateFactory _stateFactory;
     
     private IApplicationState? _activeState;
 
-    public async UniTask EnterAsync<TState, TContext>(TContext context) where TState : ApplicationState<TContext>
+    public async UniTask EnterAsync<TState, TContext>(TContext context) where TState : AppState<TContext>
     {
       if(_activeState != null)
         await _activeState.ExitAsync();
@@ -19,13 +23,13 @@ namespace com.karabaev.applicationStateMachine
       await state.EnterAsync(context);
     }
 
-    public UniTask EnterAsync<TState>() where TState : ApplicationState<EmptyStateContext>
+    public UniTask EnterAsync<TState>() where TState : AppState<EmptyStateContext>
     {
       return EnterAsync<TState, EmptyStateContext>(default);
     }
 
     public void Dispose() => _activeState?.ExitAsync().Forget();
 
-    public ApplicationStateMachine(IStateFactory stateFactory) => _stateFactory = stateFactory;
+    public AppStateMachine(IStateFactory stateFactory) => _stateFactory = stateFactory;
   }
 }

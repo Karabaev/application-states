@@ -2,7 +2,8 @@
     "name": "com.karabaev.applicationStateMachine",
     "rootNamespace": "com.karabaev.applicationStateMachine",
     "references": [
-        "UniTask"
+        "UniTask",
+        "com.karabaev.ioc.abstractions"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
