@@ -7,6 +7,13 @@
       "dependencies": {},
       "hash": "64792b672d35e43b3412fc74861f8bdbf41e3a6f"
     },
+    "com.karabaev.ioc.abstractions": {
+      "version": "https://github.com/Karabaev/com.karabaev.ioc.abstractions.git?path=Assets",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "d5fa02cd0b0192010f9342bad425d2ee25e245a5"
+    },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
       "depth": 1,
@@ -15,7 +22,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.rider": {
-      "version": "3.0.26",
+      "version": "3.0.38",
       "depth": 0,
       "source": "registry",
       "dependencies": {
